@@ -18,7 +18,7 @@ class myNavbar extends Component {
   render(){
       return (
           <div>
-      <Navbar color="dark shadow p-1 mb-9 rounded">
+      <Navbar color="shadow-lg p-1 mb-5 bg-secondary rounded">
         <NavbarBrand className={`mx-auto mr-auto`} style={{fontSize:"30px"}}>
           <Link to="/" className={`text-light`} style={{textShadow: "8px 8px 10px black"}}>
           Nom du Site
