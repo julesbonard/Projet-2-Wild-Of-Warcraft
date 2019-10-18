@@ -1,18 +1,7 @@
 import React from "react"
 
 import Navbar from "../components/Navbar"
-import CardHome from "../components/CardHome"
-
-import styled from 'styled-components'
-
-
-
-const StyledCardHome = styled.div`
-width: 80vw;
-height: 200px;
-margin-left: 10vw
-`;
-
+import WithRaids from "../components/WithRaids"
 
 function Home() {
     return (
@@ -20,9 +9,7 @@ function Home() {
             <div>
                 <Navbar />
             </div>
-            <StyledCardHome>
-                <CardHome />
-            </StyledCardHome>
+            <WithRaids />
         </div>
         
     );
