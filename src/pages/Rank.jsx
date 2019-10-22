@@ -1,8 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import CardRank from '../components/CardRank';
-import '../components/CardRank';
-
 import Navbar from '../components/Navbar';
 class Rank extends React.Component {
   constructor(props) {
@@ -41,9 +39,11 @@ class Rank extends React.Component {
         {this.state.isLoading && <div>Loading...</div>}
         <h1>{this.state.guildName}</h1>
         <div className="container row mx-auto">
-          {this.state.roster.map(guild => {
+          {this.state.roster.map((guild, i) => {
+            console.log(i);
+
             return (
-              <div className="player col-6 text-center">
+              <div className={`player col-6 ${i % 2 === 0 ? 'text-right' : 'text-left'}`}>
                 {guild.rank}
                 {guild.guild.name}
               </div>
