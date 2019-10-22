@@ -3,7 +3,7 @@ import styles from '../components/CardRank.module.css';
 const CardRank = () => {
   return (
     <div className={styles.container}>
-      <div className="d-flex flex-lg-column flex-sm-row justify-content-center">
+      <div className="d-flex flex-column justify-content-center">
         <div className="text-center">
           <img
             className={styles.displayed}

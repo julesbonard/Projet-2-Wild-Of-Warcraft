@@ -18,3 +18,9 @@
 .text {
   margin-left: 5%;
 }
+@media screen and (min-width: 200px) and (max-width: 640px) {
+  .bloc {
+    display: block;
+    clear: both;
+  }
+}
