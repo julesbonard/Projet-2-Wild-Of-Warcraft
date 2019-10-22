@@ -1,16 +1,17 @@
 import React from 'react';
 import axios from 'axios';
+import CardRank from '../components/CardRank';
+import '../components/CardRank';
 
 import Navbar from '../components/Navbar';
-
-class Guild extends React.Component {
+class Rank extends React.Component {
   constructor(props) {
     console.log('Constructor');
 
     super(props);
 
     this.state = {
-      guildName: 'Method',
+      guildName: '',
       roster: [],
       isLoading: false
     };
@@ -25,7 +26,8 @@ class Guild extends React.Component {
       )
       .then(response => {
         const ranking = response.data.raidRankings;
-        this.setState({ roster: ranking, isLoading: false });
+        //console.log (ranking, ranking.slice(0,10))
+        this.setState({ roster: ranking.slice(0, 10), isLoading: false });
       });
   }
 
@@ -35,19 +37,22 @@ class Guild extends React.Component {
     return (
       <div>
         <Navbar />
+        <CardRank />
         {this.state.isLoading && <div>Loading...</div>}
         <h1>{this.state.guildName}</h1>
-        {this.state.roster.map(guild => {
-          return (
-            <div>
-              {guild.rank}
-              {guild.guild.name}
-            </div>
-          );
-        })}
+        <div className="container row mx-auto">
+          {this.state.roster.map(guild => {
+            return (
+              <div className="player col-6 text-center">
+                {guild.rank}
+                {guild.guild.name}
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   }
 }
 
-export default Guild;
+export default Rank;
