@@ -2,13 +2,15 @@ import React from 'react';
 
 import CardHome from './CardHome';
 
+
 class WithRaids extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      raids: ['uldir', 'the-eternal-palace', 'battle-of-dazaralor']
+      raids: ['uldir', 'the-eternal-palace', 'battle-of-dazaralor','crucible-of-storms']
     };
   }
+
   render() {
     return (
       <div>

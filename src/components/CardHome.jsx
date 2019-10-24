@@ -33,6 +33,7 @@ class CardHome extends React.Component {
   }
 
   render() {
+    const dash = /-/g;
     const { raid, reverse } = this.props;
     const { isError, ranking } = this.state;
     if (isError) {
@@ -40,20 +41,17 @@ class CardHome extends React.Component {
     } else {
       return (
         <StyledCardHome
-          className={`d-flex flex-column ${
-            reverse ? 'flex-sm-row-reverse' : 'flex-sm-row'
-          } text-center`}
+          className={`d-flex flex-column text-center ${reverse ? 'flex-sm-row-reverse' : 'flex-sm-row'}`}
         >
           <div className="col-lg-3">
-            <CardImg
-              src="https://via.placeholder.com/150"
-              className="border border-dark rounded-lg"
-              alt=""
-              jsp
+            <CardImg height="100%"
+              src={`/Image/${raid}.jpg`}
+              className="border border-dark"
+              alt="coucou"
             />
           </div>
           <section className="col-lg-9">
-            <h1>{raid}</h1>
+            <h1 className="text-capitalize">{raid.replace(dash," ")}</h1>
             <h2>Small description of the raid</h2>
             {ranking.map(guild => {
               return <p>{guild.guild.name}</p>;
