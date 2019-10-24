@@ -33,7 +33,7 @@ class CardHome extends React.Component {
   }
 
   render() {
-    const kk = /-/g;
+    const dash = /-/g;
     const { raid, reverse } = this.props;
     const { isError, ranking } = this.state;
     if (isError) {
@@ -51,7 +51,7 @@ class CardHome extends React.Component {
             />
           </div>
           <section className="col-lg-9">
-            <h1 className="text-capitalize">{raid.replace(kk," ")}</h1>
+            <h1 className="text-capitalize">{raid.replace(dash," ")}</h1>
             <h2>Small description of the raid</h2>
             {ranking.map(guild => {
               return <p>{guild.guild.name}</p>;
