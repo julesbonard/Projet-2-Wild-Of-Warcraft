@@ -1,9 +1,8 @@
 import React from 'react';
-import { CardImg } from 'reactstrap';
 import axios from 'axios';
 
 import StyledCardHome from './StyleCardHome';
-import '../Css/CardHome.css';
+import '../Css/CardHome.scss';
 
 class CardHome extends React.Component {
   constructor(props) {
@@ -34,27 +33,32 @@ class CardHome extends React.Component {
 
   render() {
     const dash = /-/g;
-    const { raid, reverse } = this.props;
+    const { raid } = this.props;
     const { isError, ranking } = this.state;
     if (isError) {
       return <p>Error !</p>;
     } else {
       return (
-        <StyledCardHome
-          className={`d-flex flex-column text-center ${reverse ? 'flex-sm-row-reverse' : 'flex-sm-row'}`}
-        >
-          <div className="col-lg-3">
-            <CardImg height="100%"
-              src={`/Image/${raid}.jpg`}
-              className="border border-dark"
-              alt="coucou"
-            />
+        <StyledCardHome className="card">
+          <div className="card_thumb">
+            <a href="#">
+              <img
+                width="370px"
+                height="235px"
+                src={`/Image/${raid}.jpg`}
+                className=""
+                alt="coucou"
+              />
+            </a>
           </div>
-          <section className="col-lg-9">
-            <h1 className="text-capitalize">{raid.replace(dash," ")}</h1>
-            <h2>Small description of the raid</h2>
+          <section className="card_body">
+            <div class="card_category">
+              <a href="#">Photos</a>
+            </div>
+            <h1 className="card_title">{raid.replace(dash, ' ')}</h1>
+            <h2 className="card_subtitle">3 best guilds :</h2>
             {ranking.map(guild => {
-              return <p>{guild.guild.name}</p>;
+              return <p className="card_description">{guild.guild.name}</p>;
             })}
           </section>
         </StyledCardHome>
