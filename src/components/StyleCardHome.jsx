@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 const StyledCardHome = styled.article`
-    margin: 50px 0;
+    margin: 50px auto;
     overflow: hidden;
-    width: 370px;
+    width: 320px;
     background: #FFF;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
         a{
