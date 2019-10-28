@@ -1,9 +1,12 @@
 $duration: 0.3s;
-$color: blue;
 
 .card {
   transition: box-shadow $duration ease-in-out;
-  box-shadow: 0 0 20px rgba(153, 153, 153, 0.514);
+  box-shadow: 0 0 20px rgba(170, 170, 170, 0.383);
+  border-radius: 0.45rem !important;
+}
+.bg-color-card {
+  background: #a9b0e8 !important;
 }
 
 .card_thumb {
@@ -43,7 +46,7 @@ $color: blue;
   padding: 0 15px;
   color: white;
   font-size: 15px;
-  background-color: $color;
+  background-color: rgba(116, 70, 95, 0.637);
   border-radius: 2px;
 }
 
@@ -54,7 +57,7 @@ $color: blue;
   text-transform: capitalize;
   font-size: 30px;
   text-shadow: 3px 4px 4px rgb(128, 128, 128);
-  color: black;
+  color: #191e2a;
   font-weight: bold;
 }
 

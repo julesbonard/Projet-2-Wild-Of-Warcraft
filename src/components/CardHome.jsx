@@ -4,6 +4,7 @@ import axios from 'axios';
 import StyledCardHome from './StyleCardHome';
 import '../Css/CardHome.scss';
 import { Link } from 'react-router-dom';
+import '../Css/Navbar.scss';
 
 class CardHome extends React.Component {
   constructor(props) {
@@ -42,16 +43,10 @@ class CardHome extends React.Component {
     } else {
       return (
         <div className="col-xl-3 col-lg-6 col-sm-6">
-          <StyledCardHome className="card">
+          <StyledCardHome className="card bg-color-card">
             <div className="card_thumb">
               <Link to={`/Rank/${raid}`}>
-                <img
-                  width="320px"
-                  height="235px"
-                  src={`/Image/${raid}.jpg`}
-                  className=""
-                  alt="coucou"
-                />
+                <img width="320px" height="235px" src={`/Image/${raid}.jpg`} alt="coucou" />
               </Link>
             </div>
 
@@ -59,8 +54,8 @@ class CardHome extends React.Component {
               <div class="card_category">
                 <p>{icon}</p>
               </div>
-              <Link to={`/Rank/${raid}`}>
-                <h1 className="card_title">{raid.replace(dash, ' ')}</h1>
+              <Link to={`/Rank/${raid}`} style={{ textDecoration: 'none' }}>
+                <h1 className="title-navbar card_title">{raid.replace(dash, ' ')}</h1>
               </Link>
               <h2 className="card_subtitle">Top 3 guilds :</h2>
               {ranking.map(guild => {

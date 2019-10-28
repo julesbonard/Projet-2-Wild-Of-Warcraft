@@ -9,7 +9,7 @@ function myNavbar() {
       <Navbar className="navbar_body">
         <NavbarBrand className={`mx-auto mr-auto`}>
           <Link to="/" className={`title-navbar`}>
-            Nom du Site
+            Wild Of Warcraft
           </Link>
         </NavbarBrand>
       </Navbar>
