@@ -27,12 +27,13 @@ class Rank extends React.Component {
   }
 
   render() {
+    const dash = /-/g;
     return (
       <div>
         <Navbar />
         {this.state.isLoading && <div>Loading...</div>}
         <StyleRank src={`/Image/${this.props.match.params.raid}.jpg`} alt="coucou" />
-        <h3 className="raider">{this.props.match.params.raid}</h3>
+        <h3 className="raider">{this.props.match.params.raid.replace(dash, ' ')}</h3>
         <div className="container row mx-auto">
           {this.state.roster.map((guild, i) => {
             return <RaidRank {...guild} i={i} key={i} />;
