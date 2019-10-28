@@ -33,35 +33,38 @@ class CardHome extends React.Component {
 
   render() {
     const dash = /-/g;
+    const { icon } = this.props;
     const { raid } = this.props;
     const { isError, ranking } = this.state;
     if (isError) {
       return <p>Error !</p>;
     } else {
       return (
-        <StyledCardHome className="card">
-          <div className="card_thumb">
-            <a href="#">
-              <img
-                width="370px"
-                height="235px"
-                src={`/Image/${raid}.jpg`}
-                className=""
-                alt="coucou"
-              />
-            </a>
-          </div>
-          <section className="card_body">
-            <div class="card_category">
-              <a href="#">Photos</a>
+        <div className="col-xl-3 col-lg-6 col-sm-6">
+          <StyledCardHome className="card">
+            <div className="card_thumb">
+              <a href="#">
+                <img
+                  width="320px"
+                  height="235px"
+                  src={`/Image/${raid}.jpg`}
+                  className=""
+                  alt="coucou"
+                />
+              </a>
             </div>
-            <h1 className="card_title">{raid.replace(dash, ' ')}</h1>
-            <h2 className="card_subtitle">3 best guilds :</h2>
-            {ranking.map(guild => {
-              return <p className="card_description">{guild.guild.name}</p>;
-            })}
-          </section>
-        </StyledCardHome>
+            <section className="card_body">
+              <div class="card_category">
+                <a href="#">{icon}</a>
+              </div>
+              <h1 className="card_title">{raid.replace(dash, ' ')}</h1>
+              <h2 className="card_subtitle">Top 3 guilds :</h2>
+              {ranking.map(guild => {
+                return <p className="card_description">{guild.guild.name}</p>;
+              })}
+            </section>
+          </StyledCardHome>
+        </div>
       );
     }
   }
