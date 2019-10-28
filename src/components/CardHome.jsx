@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import StyledCardHome from './StyleCardHome';
 import '../Css/CardHome.scss';
+import { Link } from 'react-router-dom';
 
 class CardHome extends React.Component {
   constructor(props) {
@@ -43,7 +44,7 @@ class CardHome extends React.Component {
         <div className="col-xl-3 col-lg-6 col-sm-6">
           <StyledCardHome className="card">
             <div className="card_thumb">
-              <a href="#">
+              <Link to={`/Rank/${raid}`}>
                 <img
                   width="320px"
                   height="235px"
@@ -51,13 +52,16 @@ class CardHome extends React.Component {
                   className=""
                   alt="coucou"
                 />
-              </a>
+              </Link>
             </div>
+
             <section className="card_body">
               <div class="card_category">
-                <a href="#">{icon}</a>
+                <p>{icon}</p>
               </div>
-              <h1 className="card_title">{raid.replace(dash, ' ')}</h1>
+              <Link to={`/Rank/${raid}`}>
+                <h1 className="card_title">{raid.replace(dash, ' ')}</h1>
+              </Link>
               <h2 className="card_subtitle">Top 3 guilds :</h2>
               {ranking.map(guild => {
                 return <p className="card_description">{guild.guild.name}</p>;
