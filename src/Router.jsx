@@ -10,7 +10,7 @@ function Router() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/ranking" component={Ranking} />
-        <Route path="/Rank" component={Rank} />
+        <Route path="/Rank/:raid" component={Rank} />
       </Switch>
     </BrowserRouter>
   );
