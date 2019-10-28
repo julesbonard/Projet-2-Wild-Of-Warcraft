@@ -5,6 +5,7 @@ const StyledCardHome = styled.article`
     overflow: hidden;
     width: 320px;
     background: #FFF;
+    border: 1px solid rgb(25, 30, 42)!important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
         a{
         color: inherit;

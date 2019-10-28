@@ -8,7 +8,7 @@ class WithRaids extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      raids: ['uldir', 'the-eternal-palace', 'battle-of-dazaralor', 'crucible-of-storms'],
+      raids: ['the-eternal-palace', 'crucible-of-storms', 'battle-of-dazaralor', 'uldir'],
       icon: 1
     };
   }
