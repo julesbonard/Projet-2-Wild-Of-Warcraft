@@ -1,8 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import '../components/RaidRank.module.css';
+import '../Css/RaidRank.module.css';
 import Navbar from '../components/Navbar';
 import RaidRank from '../components/RaidRank';
+import StyleRank from '../components/StyleRank';
 
 class Rank extends React.Component {
   constructor(props) {
@@ -30,9 +31,8 @@ class Rank extends React.Component {
       <div>
         <Navbar />
         {this.state.isLoading && <div>Loading...</div>}
-
-        <img className="img" src={`/Image/${this.props.match.params.raid}.jpg`} alt="coucou" />
-        <h1 className="raider">{this.props.match.params.raid}</h1>
+        <StyleRank src={`/Image/${this.props.match.params.raid}.jpg`} alt="coucou" />
+        <h3 className="raider">{this.props.match.params.raid}</h3>
         <div className="container row mx-auto">
           {this.state.roster.map((guild, i) => {
             return <RaidRank {...guild} i={i} key={i} />;
