@@ -1,0 +1,39 @@
+.navbar_body {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) -10%, rgba(0, 0, 0, 0) 100%);
+  text-align: center;
+  padding: 0.5rem 0 5rem;
+  font-size: 1.25rem;
+}
+.title-navbar {
+  & {
+    font-size: 2rem;
+    position: relative;
+    padding: 1rem 0 0.5rem;
+    margin: 0 1.5rem;
+    color: #a9b0e8;
+    text-decoration: none;
+    text-shadow: 4px 4px 1px rgb(0, 0, 0);
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 7px;
+      transform: translateX(-50%) scaleX(0);
+      transform-origin: 50% 50%;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.8);
+      transition: transform 250ms;
+    }
+
+    &:hover {
+      color: rgb(255, 255, 255);
+      transition: 0.2s;
+      text-decoration-line: none !important;
+      &::after {
+        transform: translateX(-50%) scaleX(1);
+      }
+    }
+  }
+}

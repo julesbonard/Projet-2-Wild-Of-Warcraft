@@ -1,8 +1,10 @@
-*, *::before,
-*::after{
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-body{
-  background-color: rgba(233, 233, 233, 0.527)!important;
+body {
+  background: #191e2a !important;
+  width: 100vw;
 }
