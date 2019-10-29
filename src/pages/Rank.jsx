@@ -30,7 +30,7 @@ class Rank extends React.Component {
     const dash = /-/g;
     return (
       <div>
-        <Navbar />
+        <CardRank />
         {this.state.isLoading && <div>Loading...</div>}
         <StyleRank src={`/Image/${this.props.match.params.raid}.jpg`} alt="coucou" />
         <h3 className="raider">{this.props.match.params.raid.replace(dash, ' ')}</h3>
