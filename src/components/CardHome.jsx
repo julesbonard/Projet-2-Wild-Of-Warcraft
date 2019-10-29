@@ -1,6 +1,7 @@
 import React from 'react';
 import { CardImg } from 'reactstrap';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import StyledCardHome from './StyleCardHome';
 import '../Css/CardHome.css';
@@ -41,21 +42,30 @@ class CardHome extends React.Component {
     } else {
       return (
         <StyledCardHome
-          className={`d-flex flex-column text-center ${reverse ? 'flex-sm-row-reverse' : 'flex-sm-row'}`}
+          className={`d-flex flex-column text-center ${
+            reverse ? 'flex-sm-row-reverse' : 'flex-sm-row'
+          }`}
         >
           <div className="col-lg-3">
-            <CardImg height="100%"
+            <CardImg
+              height="100%"
               src={`/Image/${raid}.jpg`}
               className="border border-dark"
               alt="coucou"
             />
           </div>
           <section className="col-lg-9">
-            <h1 className="text-capitalize">{raid.replace(dash," ")}</h1>
+            <h1 className="text-capitalize">{raid.replace(dash, ' ')}</h1>
             <h2>Small description of the raid</h2>
-            {ranking.map(guild => {
-              return <p>{guild.guild.name}</p>;
-            })}
+            <ul>
+              {ranking.map(guild => {
+                return (
+                  <li key={guild.guild.id}>
+                    <Link to={guild.guild.path}>{guild.guild.name}</Link>
+                  </li>
+                );
+              })}
+            </ul>
           </section>
         </StyledCardHome>
       );

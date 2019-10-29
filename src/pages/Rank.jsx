@@ -34,7 +34,6 @@ class Rank extends React.Component {
 
     return (
       <div>
-        <Navbar />
         <CardRank />
         {this.state.isLoading && <div>Loading...</div>}
         <h1>{this.state.guildName}</h1>
