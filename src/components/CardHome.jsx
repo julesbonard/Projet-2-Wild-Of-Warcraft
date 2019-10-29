@@ -57,6 +57,24 @@ class CardHome extends React.Component {
                 alt="coucou"
               />
             </div>
+
+
+            <section className="card_body">
+              <div className="card_category">
+                <p>{icon}</p>
+              </div>
+              <Link to={`/Rank/${raid}`} style={{ textDecoration: 'none' }}>
+                <h1 className="title-navbar card_title">{raid.replace(dash, ' ')}</h1>
+              </Link>
+              <h2 className="card_subtitle">Top 3 guilds :</h2>
+              {ranking.map(guild => {
+                return (
+                  <p className="card_description" key={guild.guild.id}>
+                    {guild.guild.name}
+                  </p>
+                );
+              })}
+              
             <section className="col-lg-9">
               <h1 className="text-capitalize">{raid.replace(dash, ' ')}</h1>
               <h2>Small description of the raid</h2>
@@ -69,6 +87,7 @@ class CardHome extends React.Component {
                   );
                 })}
               </ul>
+              
             </section>
           </StyledCardHome>
           <div className="col-xl-3 col-lg-6 col-sm-6">

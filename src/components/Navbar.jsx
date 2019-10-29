@@ -7,10 +7,8 @@ function myNavbar() {
   return (
     <div style={{ marginBottom: '40px' }}>
       <Navbar className="navbar_body">
-        <NavbarBrand className={`mx-auto mr-auto`}>
-          <Link to="/" className={`title-navbar`}>
-            Wild Of Warcraft
-          </Link>
+        <NavbarBrand tag={Link} to="/" className={`mx-auto mr-auto title-navbar`}>
+          Wild Of Warcraft
         </NavbarBrand>
       </Navbar>
     </div>
