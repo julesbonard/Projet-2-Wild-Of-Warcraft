@@ -51,7 +51,7 @@ class CardHome extends React.Component {
             </div>
 
             <section className="card_body">
-              <div class="card_category">
+              <div className="card_category">
                 <p>{icon}</p>
               </div>
               <Link to={`/Rank/${raid}`} style={{ textDecoration: 'none' }}>
@@ -59,7 +59,11 @@ class CardHome extends React.Component {
               </Link>
               <h2 className="card_subtitle">Top 3 guilds :</h2>
               {ranking.map(guild => {
-                return <p className="card_description">{guild.guild.name}</p>;
+                return (
+                  <p className="card_description" key={guild.guild.id}>
+                    {guild.guild.name}
+                  </p>
+                );
               })}
             </section>
           </StyledCardHome>

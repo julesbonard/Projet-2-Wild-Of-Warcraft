@@ -17,7 +17,7 @@ class WithRaids extends React.Component {
     return (
       <Row className="justify-content-between">
         {this.state.raids.map((raid, i) => {
-          return <CardHome icon={i + this.state.icon} raid={raid} />;
+          return <CardHome icon={i + this.state.icon} key={i} raid={raid} />;
         })}
       </Row>
     );
