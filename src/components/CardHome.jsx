@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
 import StyledCardHome from './StyleCardHome';
 import '../Css/CardHome.scss';
@@ -44,52 +43,6 @@ class CardHome extends React.Component {
     } else {
       return (
         <React.Fragment>
-          <StyledCardHome
-            className={`d-flex flex-column text-center ${
-              reverse ? 'flex-sm-row-reverse' : 'flex-sm-row'
-            }`}
-          >
-            <div className="col-lg-3">
-              <CardImg
-                height="100%"
-                src={`/Image/${raid}.jpg`}
-                className="border border-dark"
-                alt="coucou"
-              />
-            </div>
-
-
-            <section className="card_body">
-              <div className="card_category">
-                <p>{icon}</p>
-              </div>
-              <Link to={`/Rank/${raid}`} style={{ textDecoration: 'none' }}>
-                <h1 className="title-navbar card_title">{raid.replace(dash, ' ')}</h1>
-              </Link>
-              <h2 className="card_subtitle">Top 3 guilds :</h2>
-              {ranking.map(guild => {
-                return (
-                  <p className="card_description" key={guild.guild.id}>
-                    {guild.guild.name}
-                  </p>
-                );
-              })}
-              
-            <section className="col-lg-9">
-              <h1 className="text-capitalize">{raid.replace(dash, ' ')}</h1>
-              <h2>Small description of the raid</h2>
-              <ul>
-                {ranking.map(guild => {
-                  return (
-                    <li key={guild.guild.id}>
-                      <Link to={guild.guild.path}>{guild.guild.name}</Link>
-                    </li>
-                  );
-                })}
-              </ul>
-              
-            </section>
-          </StyledCardHome>
           <div className="col-xl-3 col-lg-6 col-sm-6">
             <StyledCardHome className="card bg-color-card">
               <div className="card_thumb">

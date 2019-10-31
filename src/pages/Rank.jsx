@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import '../Css/RaidRank.module.css';
-import Navbar from '../components/Navbar';
+import '../Css/RaidRank.css';
 import RaidRank from '../components/RaidRank';
 import StyleRank from '../components/StyleRank';
+import CardRank from '../components/CardRank';
 
 class Rank extends React.Component {
   constructor(props) {

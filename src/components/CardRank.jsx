@@ -1,6 +1,5 @@
 import React from 'react';
-import styles from '../components/CardRank.module.css';
-import '../components/CardRank.module.css';
+import styles from '../Css/CardGuild.module.css';
 
 const CardRank = () => {
   return (
