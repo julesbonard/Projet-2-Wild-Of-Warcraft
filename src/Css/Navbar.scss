@@ -31,7 +31,7 @@
       color: rgb(255, 255, 255);
       transition: 0.3s;
       text-decoration-line: none !important;
-      &::after {
+      &:after {
         transform: translateX(-50%) scaleX(1);
       }
     }

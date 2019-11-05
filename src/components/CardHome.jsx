@@ -60,7 +60,15 @@ class CardHome extends React.Component {
                 </Link>
                 <h2 className="card_subtitle">Top 3 guilds :</h2>
                 {ranking.map(guild => {
-                  return <p className="card_description">{guild.guild.name}</p>;
+                  return (
+                    <h6>
+                      {' '}
+                      {/* balise p changée en h6 pour styliser les liens sur la page principale sans affecter le reste du code*/}
+                      <Link to={guild.guild.path} className="card_description">
+                        {guild.guild.name}
+                      </Link>
+                    </h6>
+                  );
                 })}
               </section>
             </StyledCardHome>
