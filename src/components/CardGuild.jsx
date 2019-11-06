@@ -32,9 +32,11 @@ class CardGuild extends React.Component {
   render() {
     return (
       <div>
-        {this.state.roster.map(player => {
-          return <p>{player.character.name}</p>;
-        })}
+        <row>
+          {this.state.roster.map(player => {
+            return <p>{player.character.name}</p>;
+          })}
+        </row>
       </div>
     );
   }

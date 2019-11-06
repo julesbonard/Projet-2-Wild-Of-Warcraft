@@ -20,7 +20,14 @@ h6 {
 
 a:hover {
   text-decoration-line: none !important;
-  color: white;
+  color: white !important;
+}
+
+p {
+  color: #a9b0e8;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 @media screen and (min-width: 200px) and (max-width: 640px) {
