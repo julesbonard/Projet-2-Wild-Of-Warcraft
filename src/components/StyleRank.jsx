@@ -11,7 +11,8 @@ const StyleRank = styled.img`
   height: 235px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  margin-top: 30px;
 `;
 
 export default StyleRank;
