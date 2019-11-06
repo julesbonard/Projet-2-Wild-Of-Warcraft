@@ -23,7 +23,7 @@ function Router() {
       <Switch>
         <CustomRoute exact path="/" layout={MainLayout} component={Home} />
         {/* <Route exact path="/" component={Home} /> */}
-        <Route path="/Rank" component={Rank} />
+        <Route path="/Rank/:raid" component={Rank} />
         <Route path="/guilds/:region/:realm/:guild" component={Guild} />
       </Switch>
     </BrowserRouter>

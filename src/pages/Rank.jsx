@@ -3,7 +3,7 @@ import axios from 'axios';
 import '../Css/RaidRank.css';
 import RaidRank from '../components/RaidRank';
 import StyleRank from '../components/StyleRank';
-import CardRank from '../components/CardRank';
+import '../Css/RaidRank.css';
 
 class Rank extends React.Component {
   constructor(props) {
@@ -28,9 +28,9 @@ class Rank extends React.Component {
 
   render() {
     const dash = /-/g;
+    console.log(this.props.match.params);
     return (
       <div>
-        <CardRank />
         {this.state.isLoading && <div>Loading...</div>}
         <StyleRank src={`/Image/${this.props.match.params.raid}.jpg`} alt="coucou" />
         <h3 className="raider">{this.props.match.params.raid.replace(dash, ' ')}</h3>
