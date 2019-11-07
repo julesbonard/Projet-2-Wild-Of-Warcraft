@@ -5,11 +5,11 @@ $duration: 0.3s;
   box-shadow: 0 0 20px rgba(170, 170, 170, 0.383);
   border-radius: 0.45rem !important;
 }
-.bg-color-card {
+.bgColor {
   background: #a9b0e8 !important;
 }
 
-.card_thumb {
+.thumb {
   height: 235px;
   overflow: hidden;
   background-color: black;
@@ -29,7 +29,7 @@ $duration: 0.3s;
   }
 }
 
-.card_body {
+.body {
   position: relative;
   padding: 20px;
   height: 150px;
@@ -38,7 +38,7 @@ $duration: 0.3s;
   }
   transition: height $duration;
 }
-.card_category {
+.category {
   position: absolute;
   left: 0;
   top: -25px;
@@ -50,7 +50,7 @@ $duration: 0.3s;
   border-radius: 2px;
 }
 
-.card_title {
+.title {
   margin: 0;
   padding: 0 0 10px 0;
   font-size: 1.7rem !important;
@@ -61,14 +61,14 @@ $duration: 0.3s;
   font-weight: bold;
 }
 
-.card_subtitle {
+.subtitle {
   margin: 0;
   padding: 0 0 10px 0;
   font-size: 25px !important;
   color: rgba(80, 49, 76, 1);
 }
 
-.card_description {
+.desc {
   margin: 0;
   padding: 0;
   font-size: 18px;

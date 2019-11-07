@@ -7,7 +7,7 @@ function MainLayout({ children }) {
   return (
     <>
       <Navbar />
-      <div>{children}</div>
+      <Container className="content">{children}</Container>
       <footer>Toto</footer>
     </>
   );
