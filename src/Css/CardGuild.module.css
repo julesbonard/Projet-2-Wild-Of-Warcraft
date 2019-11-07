@@ -7,6 +7,10 @@
   margin-left: 5%;
 }
 
+h2 {
+  color: #a9b0e8;
+}
+
 h6 {
   margin: 0 0 5px 0 !important;
   text-transform: capitalize;

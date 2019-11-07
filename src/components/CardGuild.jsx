@@ -1,6 +1,9 @@
 import React from 'react';
+import { Row, Container } from 'reactstrap';
 import '../Css/CardGuild.module.css';
 import axios from 'axios';
+import Player from './Player';
+import MainLayout from './MainLayout';
 
 class CardGuild extends React.Component {
   constructor(props) {
@@ -31,13 +34,18 @@ class CardGuild extends React.Component {
 
   render() {
     return (
-      <div>
-        <row>
-          {this.state.roster.map(player => {
-            return <p>{player.character.name}</p>;
-          })}
-        </row>
-      </div>
+      <MainLayout>
+        <Container>
+          <Row>
+            <h2>{this.props.guild}</h2>
+          </Row>
+          <Row>
+            {this.state.roster.map(player => {
+              return <Player {...player} />;
+            })}
+          </Row>
+        </Container>
+      </MainLayout>
     );
   }
 }
