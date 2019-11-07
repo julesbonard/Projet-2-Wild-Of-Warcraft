@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import MainLayout from './components/MainLayout';
-import Home from './pages/Home';
-import Rank from './pages/Rank';
-import Guild from './pages/Guild';
+import MainLayout from './components/layouts/MainLayout';
+import Home from './components/home/Home.page';
+import Raid from './components/raid/Raid.page';
+import Guild from './components/guild/Guild.page';
 
 const CustomRoute = ({ component: Component, layout: Layout, ...rest }) => (
   <Route
@@ -23,8 +23,8 @@ function Router() {
       <Switch>
         <CustomRoute exact path="/" layout={MainLayout} component={Home} />
         {/* <Route exact path="/" component={Home} /> */}
-        <Route path="/Rank/:raid" component={Rank} />
-        <Route path="/guilds/:region/:realm/:guild" component={Guild} />
+        <CustomRoute path="/rank/:raid" layout={MainLayout} component={Raid} />
+        <CustomRoute path="/guilds/:region/:realm/:guild" layout={MainLayout} component={Guild} />
       </Switch>
     </BrowserRouter>
   );

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyleRank = styled.img`
+const StyledRaidImg = styled.img`
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(153, 153, 153, 0.514);
   border: 1px solid #191e2a;
@@ -15,4 +15,4 @@ const StyleRank = styled.img`
   margin-top: 30px;
 `;
 
-export default StyleRank;
+export default StyledRaidImg;
