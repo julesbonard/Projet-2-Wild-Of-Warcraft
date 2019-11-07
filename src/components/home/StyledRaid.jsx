@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledCardHome = styled.article`
+const StyledRaid = styled.article`
     margin: 50px auto;
     overflow: hidden;
     width: 320px;
@@ -17,4 +17,4 @@ const StyledCardHome = styled.article`
 }
 `;
 
-export default StyledCardHome;
+export default StyledRaid;
