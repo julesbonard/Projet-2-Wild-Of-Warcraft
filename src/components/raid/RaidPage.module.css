@@ -1,3 +1,4 @@
+
 a {
   color: #a9b0e8 !important;
 }
@@ -5,4 +6,24 @@ a {
 a:hover {
   text-decoration-line: none !important;
   color: white !important;
+  
+.text {
+  margin-left: 5%;
+}
+
+h3 {
+  margin: 0 0 30px 0 !important;
+  text-transform: capitalize;
+  font-size: 35px !important;
+  text-align: center;
+  font-style: unset;
+  color: beige;
+}
+
+@media screen and (min-width: 200px) and (max-width: 640px) {
+  .bloc {
+    display: block;
+    clear: both;
+  }
+
 }
