@@ -15,7 +15,7 @@ function WithRaids() {
   const [icon, setIcon] = useState(1);
 
   return (
-    <Row className="justify-content-between">
+    <Row>
       {raids.map((raid, i) => {
         return <Raid icon={i + icon} key={i} raid={raid} />;
       })}
