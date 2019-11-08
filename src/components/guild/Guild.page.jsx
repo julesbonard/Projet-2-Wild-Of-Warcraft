@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { directive } from '@babel/types';
+// eslint-disable-next-line
+
+import './GuildPage.module.css';
+import { Container } from 'reactstrap';
 import Roster from './Roster';
 
 function GuildPage() {
@@ -39,7 +42,9 @@ function GuildPage() {
     <>
       {isError && <div>Error !</div>}
       {isLoading && <div>Loading...</div>}
-      <Roster roster={roster} />
+      <Container>
+        <Roster roster={roster} />
+      </Container>
     </>
   );
 }

@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import StyledRaidImg from './StyledRaidImg';
 import GuildTopTen from './GuildTopTen';
 import styles from './RaidPage.module.css';
+import { Link } from 'react-router-dom';
 
 function RaidPage() {
   const [topTen, setTopTen] = useState([]);
@@ -51,3 +52,12 @@ function RaidPage() {
 }
 
 export default RaidPage;
+
+{
+  /* <h6>
+  <Link to={guild.guild.path} className={desc}>
+    {guild.guild.name}
+  </Link>
+</h6>; 
+*/
+}

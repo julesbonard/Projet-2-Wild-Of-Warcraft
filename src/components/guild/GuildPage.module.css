@@ -7,7 +7,12 @@
   margin-left: 5%;
 }
 
+h2 {
+  color: #a9b0e8;
+}
+
 h6 {
+  color: #191e2a;
   margin: 0 0 5px 0 !important;
   text-transform: capitalize;
   font-size: 25px !important;
