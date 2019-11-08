@@ -65,36 +65,6 @@ function Raid({ raid, icon }) {
       </Card>
     </Col>
   );
-
-  // return (
-  //   <Col sm="6" xl="3" lg="3">
-  //     <article className={card}>
-  //       <div className={thumb}>
-  //         <Link to={`/Rank/${raid}`}>
-  //           <img width="320px" height="235px" src={`/Image/${raid}.jpg`} alt={raid} />
-  //         </Link>
-  //       </div>
-  //       <section className={body}>
-  //         <div class={category}>
-  //           <p>{icon}</p>
-  //         </div>
-  //         <Link to={`/Rank/${raid}`} style={{ textDecoration: 'none' }}>
-  //           <h1 className={title}>{raid.replace(/-/g, ' ')}</h1>
-  //         </Link>
-  //         <h2 className={subtitle}>Top 3 guilds :</h2>
-  //         {ranking.map(guild => {
-  //           return (
-  //             <h4>
-  //               <Link to={guild.guild.path} className={desc}>
-  //                 {guild.guild.name}
-  //               </Link>
-  //             </h4>
-  //           );
-  //         })}
-  //       </section>
-  //     </article>
-  //   </Col>
-  // );
 }
 
 export default Raid;
