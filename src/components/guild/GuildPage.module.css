@@ -35,6 +35,15 @@ p {
   text-align: center;
 }
 
+.error {
+  height: 2rem;
+  width: 2rem;
+  background-size: 1.6rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('https://image.flaticon.com/icons/svg/263/263115.svg');
+}
+
 @media screen and (min-width: 200px) and (max-width: 640px) {
   .bloc {
     display: block;
