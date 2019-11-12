@@ -52,10 +52,10 @@ function Raid({ raid, icon }) {
             <CardTitle className={title}>{raid.replace(/-/g, ' ')}</CardTitle>
           </Link>
           <CardSubtitle className={subtitle}>Top 3 guilds :</CardSubtitle>
-          {ranking.map(guild => {
+          {ranking.map((guild, i) => {
             return (
-              <CardText className={center}>
-                <Link to={guild.guild.path} className={desc}>
+              <CardText className={center} key={i}>
+                <Link to={guild.guild.path} key={i} className={desc}>
                   {guild.guild.name}
                 </Link>
               </CardText>
