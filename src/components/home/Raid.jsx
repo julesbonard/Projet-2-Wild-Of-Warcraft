@@ -43,9 +43,9 @@ function Raid({ raid, icon }) {
       className="mt-3"
     >
       <Card className={card}>
-        <div className={thumb}>
+        <Link to={`/Rank/${raid}`} className={thumb}>
           <CardImg src={`/Image/${raid}.jpg`} />
-        </div>
+        </Link>
         <CardBody className={body}>
           <CardText className={category}>{icon}</CardText>
           <Link to={`/Rank/${raid}`} style={{ textDecoration: 'none' }}>
