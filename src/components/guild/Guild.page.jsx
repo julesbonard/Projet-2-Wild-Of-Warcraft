@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { Toast, ToastBody, ToastHeader } from 'reactstrap';
 // eslint-disable-next-line
 
 import './GuildPage.module.css';
 import { Container } from 'reactstrap';
 import Roster from './Roster';
+import alliancePic from '../../assets/img-faction/alliance.png';
+import hordePic from '../../assets/img-faction/horde.png';
 
 function GuildPage() {
   const [roster, setRoster] = useState([]);
@@ -45,6 +46,12 @@ function GuildPage() {
       {isLoading && <div>Loading...</div>}
       <Container>
         <h1>{guildInfo.name}</h1>
+        <h2>{guildInfo.faction}</h2>>
+        {guildInfo.faction === 'horde' ? (
+          <img src={hordePic} alt="horde-img" />
+        ) : (
+          <img src={alliancePic} alt="alliance" />
+        )}
         <Roster roster={roster} />
       </Container>
     </>

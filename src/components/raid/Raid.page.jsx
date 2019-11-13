@@ -37,7 +37,7 @@ function RaidPage() {
     <Row>
       {isLoading && <div>Loading...</div>}
       <Col xs="12">
-        <StyledRaidImg src={`/Image/${raid}.jpg`} alt="coucou" />
+        <StyledRaidImg src={`/Image/${raid}.jpg`} alt="raid-img" />
       </Col>
       <Col xs="12" className="text-center">
         <h3>{raid.replace(/-/g, ' ')}</h3>

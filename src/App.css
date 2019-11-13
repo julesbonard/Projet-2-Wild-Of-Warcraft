@@ -1,6 +1,21 @@
 @font-face {
   font-family: 'Avara-Black';
-  src: url('./assets/fonts/Avara-Black.otf');
+  src: url('./assets/fonts/Avara-Black_web.woff2');
+}
+
+@font-face {
+  font-family: 'Avara-Bold';
+  src: url('./assets/fonts/Avara-Bold_web.woff2');
+}
+
+@font-face {
+  font-family: 'Avara-B-Italic';
+  src: url('./assets/fonts/Avara-Bold_Italic_web.woff2');
+}
+
+@font-face {
+  font-family: 'Bluu-Next-Italic';
+  src: url('./assets/fonts/BluuNext-Bolditalic.otf');
 }
 
 *,
@@ -10,13 +25,13 @@
   box-sizing: border-box;
 }
 body {
+  font-family: 'Bluu-Next-Italic' !important;
   background: #191e2a !important;
   width: 100vw;
-  font-family: 'Avara-Black';
 }
 
 h2 {
-  font-family: 'Avara-Black';
+  font-family: 'Avara-B-Italic';
 }
 
 footer {

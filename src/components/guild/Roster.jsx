@@ -12,9 +12,10 @@ function Roster({ roster }) {
       <Table size="sm" dark>
         <thead>
           <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
+            <th>Membre</th>
+            <th>Niveau</th>
+            <th>Progression dans les Raids</th>
+            <th>Score Total</th>
           </tr>
         </thead>
         <tbody>
