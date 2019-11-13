@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { Toast, ToastBody, ToastHeader } from 'reactstrap';
 // eslint-disable-next-line
 
 import './GuildPage.module.css';
@@ -43,6 +44,7 @@ function GuildPage() {
       {isError && <div>Error !</div>}
       {isLoading && <div>Loading...</div>}
       <Container>
+        <h1>{guildInfo.name}</h1>
         <Roster roster={roster} />
       </Container>
     </>

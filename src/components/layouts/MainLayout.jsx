@@ -8,7 +8,7 @@ function MainLayout({ children }) {
     <>
       <Navbar />
       <Container className="content">{children}</Container>
-      <footer>Toto</footer>
+      <footer>{/*World Of Warcraft, c'est bien mais Apex, c'est mieux. - Confucius */}</footer>
     </>
   );
 }
