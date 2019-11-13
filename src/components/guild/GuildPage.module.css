@@ -23,7 +23,7 @@ h2 {
   text-align: center;
   font-size: 25px !important;
   text-transform: capitalize;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 h6 {
@@ -43,11 +43,13 @@ a:hover {
   color: white !important;
 }
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.factionimg {
+  text-align: center;
   padding-bottom: 20px;
+}
+
+.imgsize {
+  width: 100px;
 }
 
 p {

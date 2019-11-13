@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 // eslint-disable-next-line
 
-import './GuildPage.module.css';
+import style from './GuildPage.module.css';
 import { Container } from 'reactstrap';
 import Roster from './Roster';
 import alliancePic from '../../assets/img-faction/alliance.png';
@@ -47,11 +47,13 @@ function GuildPage() {
       <Container>
         <h1>{guildInfo.name}</h1>
         <h2>{guildInfo.faction}</h2>>
-        {guildInfo.faction === 'horde' ? (
-          <img src={hordePic} alt="horde-img" />
-        ) : (
-          <img src={alliancePic} alt="alliance" />
-        )}
+        <div className={style.factionimg} alt>
+          {guildInfo.faction === 'horde' ? (
+            <img className={style.imgsize} src={hordePic} alt="horde-img" />
+          ) : (
+            <img className={style.imgsize} src={alliancePic} alt="alliance" />
+          )}
+        </div>
         <Roster roster={roster} />
       </Container>
     </>
