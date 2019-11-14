@@ -4,10 +4,11 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 // eslint-disable-next-line
 
-import './GuildPage.module.css';
 import { Container, Alert, Button } from 'reactstrap';
 import Roster from './Roster';
-import styles from './GuildPage.module.css';
+import alliancePic from '../../assets/img-faction/alliance.png';
+import hordePic from '../../assets/img-faction/horde.png';
+import styles from './GuildPage.module.scss';
 
 const { error } = styles;
 
@@ -53,16 +54,26 @@ function GuildPage() {
         </Alert>
       )}
 
-      {isLoading && (
+      {isLoading ? (
         <div className="text-center">
           <div className="spinner-border text-warning" role="status">
             <span className="sr-only">Loading...</span>
           </div>
         </div>
+      ) : (
+        <Container>
+          <h1>{guildInfo.name}</h1>
+          <h2>{guildInfo.faction}</h2>>
+          <div className={styles.factionimg} alt>
+            {guildInfo.faction === 'horde' ? (
+              <img className={styles.imgsize} src={hordePic} alt="horde-img" />
+            ) : (
+              <img className={styles.imgsize} src={alliancePic} alt="alliance-img" />
+            )}
+          </div>
+          <Roster roster={roster} />
+        </Container>
       )}
-      <Container>
-        <Roster roster={roster} />
-      </Container>
     </>
   );
 }

@@ -7,8 +7,23 @@
   margin-left: 5%;
 }
 
+h1 {
+  color: white;
+  font-size: 30px !important;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  font-family: 'Avara-Bold';
+}
+
 h2 {
   color: #a9b0e8;
+  text-align: center;
+  font-size: 25px !important;
+  text-transform: capitalize;
+  padding-bottom: 2rem;
 }
 
 h6 {
@@ -28,10 +43,23 @@ a:hover {
   color: white !important;
 }
 
+.factionimg {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.imgsize {
+  width: 100px;
+}
+
 p {
   color: #a9b0e8;
   display: flex;
   flex-direction: column;
+  text-align: center;
+}
+
+table {
   text-align: center;
 }
 

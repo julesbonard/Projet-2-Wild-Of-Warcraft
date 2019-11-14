@@ -44,7 +44,7 @@ function Raid({ raid, icon }) {
     >
       <Card className={card}>
         <Link to={`/Rank/${raid}`} className={thumb}>
-          <CardImg src={`/Image/${raid}.jpg`} />
+          <CardImg src={`/Image/${raid}.jpg`} alt="raid-img" />
         </Link>
         <CardBody className={body}>
           <CardText className={category}>{icon}</CardText>
