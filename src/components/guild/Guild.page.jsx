@@ -9,6 +9,7 @@ import Roster from './Roster';
 import alliancePic from '../../assets/img-faction/alliance.png';
 import hordePic from '../../assets/img-faction/horde.png';
 import styles from './GuildPage.module.scss';
+import Loader from '../../Loader';
 
 const { error } = styles;
 
@@ -55,11 +56,7 @@ function GuildPage() {
       )}
 
       {isLoading ? (
-        <div className="text-center">
-          <div className="spinner-border text-warning" role="status">
-            <span className="sr-only">Loading...</span>
-          </div>
-        </div>
+        <Loader />
       ) : (
         <Container>
           <h1>{guildInfo.name}</h1>

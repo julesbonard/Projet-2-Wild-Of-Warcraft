@@ -2,14 +2,15 @@ import React from 'react';
 import { Row, Table } from 'reactstrap';
 
 import Player from './Player';
+import './GuildPage.module.scss';
 
 function Roster({ roster }) {
   return (
     <Row>
-      <Table size="sm" dark>
+      <Table size="sm" hover dark>
         <thead>
           <tr>
-            <th style={{ verticalAlign: 'middle' }}>Classe</th>
+            <th>Classe</th>
             <th>Membre</th>
             <th>
               Progression <br /> dans les Raids
@@ -19,6 +20,7 @@ function Roster({ roster }) {
               Item Level Equipped
               <br /> / Item Level Total
             </th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
