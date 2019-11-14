@@ -15,7 +15,7 @@ function Player({ character, raidProgress, keystoneScores }) {
       </td>
       <td>
         <img
-          src={`https://render-us.worldofwarcraft.com/character/${character.thumbnail}`}
+          src={`https://render-${character.region.slug}.worldofwarcraft.com/character/${character.thumbnail}`}
           alt={character.name}
         />
       </td>

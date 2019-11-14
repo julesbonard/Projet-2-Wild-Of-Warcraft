@@ -1,0 +1,80 @@
+.container {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.text {
+  margin-left: 5%;
+}
+
+h1 {
+  color: white;
+  font-size: 30px !important;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  font-family: 'Avara-Bold';
+}
+
+h2 {
+  color: #a9b0e8;
+  text-align: center;
+  font-size: 25px !important;
+  text-transform: capitalize;
+  padding-bottom: 2rem;
+}
+
+h6 {
+  color: #191e2a;
+  margin: 0 0 5px 0 !important;
+  text-transform: capitalize;
+  font-size: 25px !important;
+  display: flex;
+  flex-direction: column;
+  font-style: unset;
+  font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #191e2a;
+}
+
+a:hover {
+  text-decoration-line: none !important;
+  color: white !important;
+}
+
+.factionimg {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.imgsize {
+  width: 100px;
+}
+
+p {
+  color: #a9b0e8;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+table {
+  text-align: center;
+}
+
+.error {
+  height: 2rem;
+  width: 2rem;
+  background-size: 1.6rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('https://image.flaticon.com/icons/svg/263/263115.svg');
+}
+
+@media screen and (min-width: 200px) and (max-width: 640px) {
+  .bloc {
+    display: block;
+    clear: both;
+  }
+}
