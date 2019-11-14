@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 // eslint-disable-next-line
 
-import style from './GuildPage.module.css';
-import { Container } from 'reactstrap';
+import { Container, Alert, Button } from 'reactstrap';
 import Roster from './Roster';
 import alliancePic from '../../assets/img-faction/alliance.png';
 import hordePic from '../../assets/img-faction/horde.png';
+import styles from './GuildPage.module.scss';
+
+const { error } = styles;
 
 function GuildPage() {
   const [roster, setRoster] = useState([]);
@@ -16,6 +19,8 @@ function GuildPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   const { region, realm, guild } = useParams();
+  const [visible, setVisible] = useState(true);
+  const onDismiss = () => setVisible(false);
 
   useEffect(() => {
     const fetchDatas = () => {
@@ -42,20 +47,33 @@ function GuildPage() {
 
   return (
     <>
-      {isError && <div>Error !</div>}
-      {isLoading && <div>Loading...</div>}
-      <Container>
-        <h1>{guildInfo.name}</h1>
-        <h2>{guildInfo.faction}</h2>>
-        <div className={style.factionimg} alt>
-          {guildInfo.faction === 'horde' ? (
-            <img className={style.imgsize} src={hordePic} alt="horde-img" />
-          ) : (
-            <img className={style.imgsize} src={alliancePic} alt="alliance" />
-          )}
+      {isError && (
+        <Alert color="danger" isOpen={visible} toggle={onDismiss}>
+          <Button tag={Link} to="/" color="danger" className={error}></Button>
+          <strong> Warning !</strong> Problems with API's data, return to the home page.
+        </Alert>
+      )}
+
+      {isLoading ? (
+        <div className="text-center">
+          <div className="spinner-border text-warning" role="status">
+            <span className="sr-only">Loading...</span>
+          </div>
         </div>
-        <Roster roster={roster} />
-      </Container>
+      ) : (
+        <Container>
+          <h1>{guildInfo.name}</h1>
+          <h2>{guildInfo.faction}</h2>>
+          <div className={styles.factionimg} alt>
+            {guildInfo.faction === 'horde' ? (
+              <img className={styles.imgsize} src={hordePic} alt="horde-img" />
+            ) : (
+              <img className={styles.imgsize} src={alliancePic} alt="alliance-img" />
+            )}
+          </div>
+          <Roster roster={roster} />
+        </Container>
+      )}
     </>
   );
 }

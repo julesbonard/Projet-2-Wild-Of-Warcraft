@@ -43,19 +43,19 @@ function Raid({ raid, icon }) {
       className="mt-3"
     >
       <Card className={card}>
-        <div className={thumb}>
-          <CardImg src={`/Image/${raid}.jpg`} />
-        </div>
+        <Link to={`/Rank/${raid}`} className={thumb}>
+          <CardImg src={`/Image/${raid}.jpg`} alt="raid-img" />
+        </Link>
         <CardBody className={body}>
           <CardText className={category}>{icon}</CardText>
           <Link to={`/Rank/${raid}`} style={{ textDecoration: 'none' }}>
             <CardTitle className={title}>{raid.replace(/-/g, ' ')}</CardTitle>
           </Link>
           <CardSubtitle className={subtitle}>Top 3 guilds :</CardSubtitle>
-          {ranking.map(guild => {
+          {ranking.map((guild, i) => {
             return (
-              <CardText className={center}>
-                <Link to={guild.guild.path} className={desc}>
+              <CardText className={center} key={i}>
+                <Link to={guild.guild.path} key={i} className={desc}>
                   {guild.guild.name}
                 </Link>
               </CardText>

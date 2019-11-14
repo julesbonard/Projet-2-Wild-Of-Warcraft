@@ -10,7 +10,7 @@ function GuildTopTen({ i, rank, guild }) {
       style={{ color: 'white' }}
     >
       {rank}
-      <Link to={guild.path}>{guild.name}</Link>
+      <Link to={guild.path}> {guild.name}</Link>
     </div>
   );
 }
