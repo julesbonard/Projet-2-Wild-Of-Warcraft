@@ -45,7 +45,7 @@ a:hover {
 
 .factionimg {
   text-align: center;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .imgsize {
@@ -70,6 +70,11 @@ table {
   background-position: center;
   background-repeat: no-repeat;
   background-image: url('https://image.flaticon.com/icons/svg/263/263115.svg');
+}
+
+td,
+th {
+  vertical-align: middle !important;
 }
 
 @media screen and (min-width: 200px) and (max-width: 640px) {
