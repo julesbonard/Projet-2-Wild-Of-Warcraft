@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+// eslint-disable-next-line
 
+import { Container, Alert, Button } from 'reactstrap';
 import PlayerInfos from './PlayerInfos';
+import Loader from '../../Loader';
+import Progress from './Progress';
+import './CharacterPage.module.scss';
 
 function CharacterPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,12 +41,20 @@ function CharacterPage() {
   }, []);
 
   return (
-    <div>
-      <PlayerInfos character={character} guild={guild} />
-      {/* <CharacterInfos />
-            <RaidProgress  />
-            <MythicPlus runs={bestRuns} /> */}
-    </div>
+    <>
+      <div>
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <>
+            <PlayerInfos character={character} guild={guild} />
+            <Progress raids={progress} />
+            {/* <MythicPlus runs={bestRuns} /> */}
+          </>
+        )}
+      </div>
+      )}
+    </>
   );
 }
 

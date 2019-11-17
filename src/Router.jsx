@@ -29,7 +29,8 @@ function Router() {
           path="/characters/:region/:realm/:name"
           layout={MainLayout}
           component={Character}
-        />
+        />{' '}
+        */}
       </Switch>
     </BrowserRouter>
   );

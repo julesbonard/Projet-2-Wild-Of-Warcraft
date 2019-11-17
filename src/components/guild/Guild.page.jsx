@@ -48,14 +48,12 @@ function GuildPage() {
 
   return (
     <>
-      {isError && (
+      {isError ? (
         <Alert color="danger" isOpen={visible} toggle={onDismiss}>
           <Button tag={Link} to="/" color="danger" className={error}></Button>
           <strong> Warning !</strong> Problems with API's data, return to the home page.
         </Alert>
-      )}
-
-      {isLoading ? (
+      ) : isLoading ? (
         <Loader />
       ) : (
         <Container>
@@ -69,6 +67,7 @@ function GuildPage() {
             )}
           </div>
           <Roster roster={roster} />
+          {/* <Link to= </Link> */}
         </Container>
       )}
     </>
